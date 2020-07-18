@@ -33,7 +33,7 @@
                </ul>
                <!-- button for login modal-------------- -->
                <span class="navbar-text">
-                   <a data-toggle="modal" data-target="#loginModal">
+                   <a id="loginBTN">
                        <span class="fa fa-sign-in"></span>Login
                    </a>
                </span>
@@ -96,7 +96,7 @@
                     </div>
                     <!-- button for reserve modal -------------------------------------->
                     <div class="col-12 col-sm-6 align-self-center">
-                        <a  class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                        <a  class="btn btn-warning btn-block" id="reserveTableBTN">Reserve Table</a>
                     </div>
                     <!-- ---------------------------------------------------------- -->
                 </div>
@@ -405,6 +405,16 @@
             });
         
         });
+
+
+        $( "#reserveTableBTN" ).click(function() {
+            $('#reserveModal').modal('toggle');
+        });
+
+        $( "#loginBTN" ).click(function() {
+            $('#loginModal').modal('toggle');
+        });
+
     </script>
 
 </body>
